@@ -48,8 +48,8 @@ export default {
   background-image: url('/vintage-map.jpg');
   background-size: cover;
   background-position: center;
-  filter: sepia(0.2) brightness(0.8);
-  opacity: 0.3;
+  filter: sepia(0.15) brightness(0.9);
+  opacity: 0.6;
 }
 
 .map-background::after {
