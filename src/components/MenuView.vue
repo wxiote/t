@@ -45,11 +45,11 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/2.3522,48.8566,12,0/1280x800@2x?access_token=pk.eyJ1IjoiZWxpYTY5IiwiYSI6ImNtaWZ0MzVvbjAwc3AzZnM5ZXI3aXMxYXEifQ.VWi_BgyZgOYqHgGSi8rGeA');
+  background-image: url('/vintage-map.jpg');
   background-size: cover;
   background-position: center;
-  filter: grayscale(0.3) brightness(0.7);
-  opacity: 0.4;
+  filter: sepia(0.2) brightness(0.8);
+  opacity: 0.3;
 }
 
 .map-background::after {
