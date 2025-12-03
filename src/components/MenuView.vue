@@ -14,11 +14,11 @@
           <div class="project-cta">Explorer →</div>
         </article>
 
-        <article class="project-tile coming">
-          <div class="project-icon">🚀</div>
-          <h2>Nouveaux projets</h2>
-          <p>Bientôt disponible</p>
-          <div class="project-cta disabled">À venir</div>
+        <article class="project-tile" @click="$emit('open', 'velov')" role="button" tabindex="0">
+          <div class="project-icon">🚴</div>
+          <h2>69 en velo'v</h2>
+          <p>Carte de mes itinéraires Vélo'v à Lyon</p>
+          <div class="project-cta">Explorer →</div>
         </article>
       </div>
     </div>
