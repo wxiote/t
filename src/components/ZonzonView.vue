@@ -1,5 +1,6 @@
 <template>
   <div class="zonzon-container">
+    <button class="back-button" @click="$emit('back')" title="Retour à l'accueil">← Accueil</button>
     <div id="zonzon-map" class="map-canvas"></div>
     <div class="map-title">zonzon</div>
     <div class="projection-info">Projection: Equal Earth (vraies proportions)</div>
@@ -27,6 +28,7 @@ export default {
       })
 
       this.map.addControl(new mapboxgl.NavigationControl(), 'top-right')
+      this.map.addControl(new mapboxgl.ScaleControl({ unit: 'metric' }), 'bottom-left')
     }
   },
   beforeUnmount() {
@@ -76,3 +78,25 @@ export default {
   z-index: 1;
 }
 </style>
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}

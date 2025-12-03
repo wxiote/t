@@ -1,5 +1,6 @@
 <template>
   <div class="map-page">
+    <button class="back-button" @click="$emit('back')" title="Retour à l'accueil">← Accueil</button>
     <aside class="controls">
       <div class="floor-selector">
         <label>Étage:</label>
@@ -118,6 +119,7 @@ export default {
       this.map.on('load', async () => {
         // add navigation controls
         this.map.addControl(new mapboxgl.NavigationControl({ showCompass: true }))
+        this.map.addControl(new mapboxgl.ScaleControl({ unit: 'metric' }), 'bottom-left')
 
         try {
           // try several possible locations for map.json (dev / build differences)
@@ -432,3 +434,25 @@ export default {
 .floor-buttons button { padding:6px 8px; border:1px solid #ddd; background:#fff; cursor:pointer; border-radius:4px }
 .floor-buttons button.active { background:#2171b5; color:#fff; border-color:#1b5fa3 }
 </style>
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}

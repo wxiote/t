@@ -92,7 +92,7 @@ export default {
 }
 
 .project-tile {
-  background: rgba(90, 140, 75, 0.75);
+  background: rgba(90, 140, 75, 0.5);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.3);
   padding: 18px;

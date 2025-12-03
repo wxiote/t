@@ -3,13 +3,13 @@
     <main>
       <MenuView v-if="activeTab === 'home'" @open="openTab" />
       <div v-if="activeTab === 'italie2'" class="scene">
-        <MapView />
+        <MapView @back="openTab('home')" />
       </div>
       <div v-if="activeTab === 'velov'" class="scene">
-        <VelovView />
+        <VelovView @back="openTab('home')" />
       </div>
       <div v-if="activeTab === 'zonzon'" class="scene">
-        <ZonzonView />
+        <ZonzonView @back="openTab('home')" />
       </div>
     </main>
   </div>
